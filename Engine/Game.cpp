@@ -42,4 +42,51 @@ void Game::UpdateModel()
 
 void Game::ComposeFrame()
 {
+	int x = 400;
+	int y = 300;
+
+	if (wnd.kbd.KeyIsPressed(VK_RIGHT)) {
+		x = x + 10;
+	}
+
+	if (wnd.kbd.KeyIsPressed(VK_LEFT)) {
+		x = x - 10;
+	}
+
+	if (wnd.kbd.KeyIsPressed(VK_DOWN)) {
+		y = y + 10;
+	}
+
+	if (wnd.kbd.KeyIsPressed(VK_UP)) {
+		y = y - 10;
+	}
+
+	int gb = 255;
+
+	if (wnd.kbd.KeyIsPressed(VK_CONTROL)) {
+		gb = 0;
+	}
+
+	if (wnd.kbd.KeyIsPressed(VK_SHIFT)) {
+		gfx.PutPixel(-5 + x, -5 + y, 255, gb, gb);
+		gfx.PutPixel(-5 + x, -4 + y, 255, gb, gb);
+		gfx.PutPixel(-5 + x, -3 + y, 255, gb, gb);
+		gfx.PutPixel(-4 + x, -5 + y, 255, gb, gb);
+		gfx.PutPixel(-3 + x, -5 + y, 255, gb, gb);
+		gfx.PutPixel(-5 + x, 5 + y, 255, gb, gb);
+		gfx.PutPixel(-5 + x, 4 + y, 255, gb, gb);
+		gfx.PutPixel(-5 + x, 3 + y, 255, gb, gb);
+		gfx.PutPixel(-4 + x, 5 + y, 255, gb, gb);
+		gfx.PutPixel(-3 + x, 5 + y, 255, gb, gb);
+		gfx.PutPixel(5 + x, -5 + y, 255, gb, gb);
+		gfx.PutPixel(5 + x, -4 + y, 255, gb, gb);
+		gfx.PutPixel(5 + x, -3 + y, 255, gb, gb);
+		gfx.PutPixel(4 + x, -5 + y, 255, gb, gb);
+		gfx.PutPixel(3 + x, -5 + y, 255, gb, gb);
+		gfx.PutPixel(5 + x, 5 + y, 255, gb, gb);
+		gfx.PutPixel(5 + x, 4 + y, 255, gb, gb);
+		gfx.PutPixel(5 + x, 3 + y, 255, gb, gb);
+		gfx.PutPixel(4 + x, 5 + y, 255, gb, gb);
+		gfx.PutPixel(3 + x, 5 + y, 255, gb, gb);
+	}
 }
